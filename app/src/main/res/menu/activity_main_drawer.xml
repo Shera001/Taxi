@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_trip"
+            android:icon="@drawable/ic_trip"
+            android:title="@string/my_trips" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_wallet"
+            android:title="@string/payment_methods" />
+
+        <item
+            android:id="@+id/nav_discount"
+            android:icon="@drawable/ic_half_start"
+            android:title="@string/favorite_addresses" />
+    </group>
+</menu>

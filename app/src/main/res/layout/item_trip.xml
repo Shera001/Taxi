@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/_16dp"
+    app:cardElevation="@dimen/_4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingTop="@dimen/_12dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/startAddressTv"
+            style="@style/AddressText"
+            app:layout_constraintBottom_toBottomOf="@id/img1"
+            app:layout_constraintStart_toEndOf="@id/img1"
+            app:layout_constraintTop_toTopOf="@id/img1"
+            tools:text="@tools:sample/cities" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="@dimen/_28dp"
+            android:layout_height="@dimen/_28dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:src="@drawable/ic_end_point"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img1" />
+
+        <TextView
+            android:id="@+id/endAddressTv"
+            style="@style/AddressText"
+            app:layout_constraintBottom_toBottomOf="@id/img2"
+            app:layout_constraintStart_toEndOf="@id/img2"
+            app:layout_constraintTop_toTopOf="@id/img2"
+            tools:text="@tools:sample/cities" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:background="@drawable/shape_item_trip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14sp"
+            android:translationY="0.6sp"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:text="@tools:sample/date/hhmm" />
+
+        <View
+            android:id="@+id/pointView"
+            android:layout_width="@dimen/_5dp"
+            android:layout_height="@dimen/_5dp"
+            android:layout_marginStart="@dimen/_4dp"
+            android:background="@drawable/point"
+            app:layout_constraintBottom_toBottomOf="@id/timeTv"
+            app:layout_constraintStart_toEndOf="@id/timeTv"
+            app:layout_constraintTop_toTopOf="@id/timeTv" />
+
+        <TextView
+            android:id="@+id/tripPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/pointView"
+            app:layout_constraintStart_toEndOf="@id/pointView"
+            app:layout_constraintTop_toTopOf="@id/pointView"
+            tools:text="@tools:sample/cities" />
+
+        <ImageView
+            android:id="@+id/carImage"
+            android:layout_width="@dimen/_120dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:translationZ="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

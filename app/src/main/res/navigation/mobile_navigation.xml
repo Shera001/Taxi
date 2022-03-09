@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.taxi.presentation.home.HomeFragment"
+        android:label="@string/my_trips"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_trip"
+            app:destination="@id/nav_trip"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trip"
+        android:name="com.example.taxi.presentation.trip.TripFragment"
+        android:label="fragment_trip"
+        tools:layout="@layout/fragment_trip">
+        <action
+            android:id="@+id/navigateTripFragmentToTripDetailFragment"
+            app:destination="@id/tripDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripDetailFragment"
+        android:name="com.example.taxi.presentation.trip_detail.TripDetailFragment"
+        android:label="fragment_trip_detail"
+        tools:layout="@layout/fragment_trip_detail">
+        <action
+            android:id="@+id/action_tripDetailFragment_to_nav_trip"
+            app:destination="@id/nav_trip"
+            app:popUpTo="@id/nav_trip"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

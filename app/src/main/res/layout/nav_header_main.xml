@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:layout_marginStart="@dimen/_16dp"
+    android:layout_marginTop="@dimen/_94dp"
+    android:layout_marginEnd="@dimen/_16dp"
+    android:layout_marginBottom="@dimen/_16dp"
+    android:background="@drawable/background_header_main"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_60dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:contentDescription="@string/nav_header_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/userNameTv"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text"
+        android:layout_marginStart="@dimen/_14dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/menu_ful_name_color"
+        android:textSize="@dimen/_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNumberTv"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2dp"
+        android:layout_marginStart="@dimen/_14dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/nav_header_subtitle"
+        android:textColor="@color/menu_number_color"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageIcon"
+        app:layout_constraintTop_toBottomOf="@id/userNameTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

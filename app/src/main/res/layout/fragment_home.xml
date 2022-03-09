@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.home.HomeFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/markerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_marker" />
+
+    <ImageView
+        android:id="@+id/menuIconImage"
+        android:layout_width="@dimen/_44dp"
+        android:layout_height="@dimen/_44dp"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@drawable/menu_icon_bg"
+        android:padding="@dimen/_11dp"
+        android:src="@drawable/ic_menu_icon" />
+
+    <View
+        android:id="@+id/menuIconView"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/_11dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_view_bg"
+        android:paddingBottom="@dimen/_20dp">
+
+        <TextView
+            android:id="@+id/startAddress"
+            style="@style/FromAddressText"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:drawablePadding="@dimen/_12dp"
+            app:drawableStartCompat="@drawable/ic_start_point"
+            app:layout_constraintEnd_toEndOf="@id/bottomView"
+            app:layout_constraintStart_toStartOf="@id/bottomView"
+            app:layout_constraintTop_toTopOf="@+id/bottomView" />
+
+        <TextView
+            android:id="@+id/andAddress"
+            style="@style/ToAddressText"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_12dp"
+            app:drawableStartCompat="@drawable/ic_end_point"
+            app:layout_constraintEnd_toEndOf="@id/startAddress"
+            app:layout_constraintStart_toStartOf="@id/startAddress"
+            app:layout_constraintTop_toBottomOf="@+id/startAddress" />
+
+        <ImageView
+            android:id="@+id/imageRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/andAddress"
+            app:layout_constraintEnd_toEndOf="@+id/andAddress"
+            app:layout_constraintTop_toTopOf="@id/andAddress" />
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="@dimen/_0dp"
+            android:layout_margin="@dimen/_16dp"
+            android:background="@color/divider_color"
+            app:layout_constraintBottom_toBottomOf="@id/andAddress"
+            app:layout_constraintEnd_toStartOf="@+id/imageRight"
+            app:layout_constraintTop_toTopOf="@id/andAddress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/locationImage"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_175dp"
+        android:background="@drawable/location_bg"
+        android:padding="@dimen/_8dp"
+        android:src="@drawable/ic_location" />
+
+</FrameLayout>
